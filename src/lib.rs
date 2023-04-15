@@ -161,6 +161,9 @@ pub struct Metadata {
     pub packages: Vec<Package>,
     /// A list of all workspace members
     pub workspace_members: Vec<PackageId>,
+    /// A list of all workspace default members
+    #[serde(default)]
+    pub workspace_default_members: Vec<PackageId>,
     /// Dependencies graph
     pub resolve: Option<Resolve>,
     /// Workspace root
